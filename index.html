@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Suitmedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link ke CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <!-- Logo di sebelah kiri navbar -->
+      <div class="logo">
+        <a href="#" class="logo-link">
+          <img src="https://raw.githubusercontent.com/violetsareblue97/suitmedia-zefanya-v-test/refs/heads/main/logosuitmedia.png" alt="Suitmedia Logo" class="logo-img">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/ideas" class="nav-link active">Ideas</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section id="banner">
+    <div class="banner-content">
+      <h1>Our Ideas</h1>
+      <p>Where all our great things begin</p>
+    </div>
+  </section>
+
+  <!-- Kontrol List -->
+  <section class="controls container">
+    <div>
+      Show per page:
+      <select id="perPage">
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+      </select>
+    </div>
+    <div>
+      Sort by:
+      <select id="sortBy">
+        <option value="desc">Terbaru</option>
+        <option value="asc">Terlama</option>
+      </select>
+    </div>
+  </section>
+  <section id="posts" class="container">
+  <div id="postsGrid" class="grid">
+    <!-- Card akan diisi otomatis melalui JavaScript -->
+  </div>
+</section>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>

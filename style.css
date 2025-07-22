@@ -1,0 +1,164 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+/* Container umum untuk layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 1. Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fe6601;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    padding: 10px 0;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+header .container {
+    display: flex;
+    align-items: center;  /* Menyelaraskan elemen di tengah secara vertikal */
+    justify-content: space-between; /* Menjaga ruang antara logo dan navbar */
+    height: 60px;
+}
+
+/* Logo */
+.logo {
+    flex: 0 0 auto; /* Agar logo tetap berada di kiri dan tidak meluas */
+}
+
+.logo-img {
+    width: 120px; /* Mengatur lebar logo sesuai kebutuhan */
+    height: auto;
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antar menu navbar */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+/* 2. Banner */
+#banner {
+    height: 400px;
+    background: url('https://static.vecteezy.com/system/resources/previews/048/263/147/non_2x/fun-black-line-doodle-pattern-creative-minimalist-style-art-background-for-children-or-trendy-design-with-basic-shapes-simple-childish-scribble-backdrop-vector.jpg') center/cover no-repeat;
+    filter: brightness(50%);
+    position: relative;
+    overflow: hidden;
+    transform: skewY(-3deg);
+    transform-origin: bottom left;
+}
+
+.banner-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#banner h1 {
+    font-size: 3rem;
+}
+
+#banner p {
+    font-size: 1.2rem;
+}
+
+/* 3. List Post & Controls */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+}
+
+time {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
